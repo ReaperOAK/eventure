@@ -1,23 +1,23 @@
 # Firebase Dev – TODO Checklist
 
 ## Initial Setup
-- [ ] Review `eventure.md` and database structure
-- [ ] Set up Firebase project and Firestore
-- [ ] Create folder structure for services and config
+- [x] Review `eventure.md` and database structure
+- [x] Set up Firebase project and Firestore
+- [x] Create folder structure for services and config
 
 ## Backend Logic
-- [ ] Implement `firebaseConfig.js` (Firebase setup)
-- [ ] Implement `userService.js` (user CRUD)
-- [ ] Implement `checkpointService.js` (checkpoint CRUD)
-- [ ] Implement `scanService.js` (scan logic)
-- [ ] Implement `leaderboardService.js` (leaderboard logic)
-- [ ] Write Firestore security rules (`firestore.rules`)
-- [ ] Create Firestore indexes (`firestore.indexes.json`)
+- [x] Implement `firebaseConfig.js` (Firebase setup)
+- [x] Implement `userService.js` (user CRUD)
+- [x] Implement `checkpointService.js` (checkpoint CRUD)
+- [x] Implement `scanService.js` (scan logic)
+- [x] Implement `leaderboardService.js` (leaderboard logic)
+- [x] Write Firestore security rules (`firestore.rules`)
+- [x] Create Firestore indexes (`firestore.indexes.json`)
 
 ## Features
-- [ ] Functions for registering users, recording scans, validating time/location/duplicates
+- [x] Functions for registering users, recording scans, validating time/location/duplicates
 - [ ] Admin checkpoint management endpoints
-- [ ] Fetch leaderboard and progress data
+- [x] Fetch leaderboard and progress data
 
 ## Integration
 - [ ] Provide API/services for frontend
