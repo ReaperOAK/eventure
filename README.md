@@ -101,8 +101,73 @@ Smart QR-based Checkpoint Tracker for Fests
 - TailwindCSS, Firebase, and all major dependencies are preconfigured.
 - See `/planning and scopes/` for feature breakdowns and responsibilities.
 
----
+## Deployment
 
+### Prerequisites
+- Node.js 18+ and npm installed
+- Firebase CLI installed (`npm install -g firebase-tools`)
+- Firebase project created at https://console.firebase.google.com
+
+### Environment Setup
+1. Copy `.env.example` to `.env`:
+   ```powershell
+   copy .env.example .env
+   ```
+2. Fill in your Firebase configuration in `.env`
+3. Ensure Firestore is enabled in your Firebase project
+
+### Deploy to Firebase
+Using the automated deployment script:
+```powershell
+# Full deployment (build + deploy)
+.\scripts\deploy.ps1
+
+# Skip build (use existing dist/ folder)
+.\scripts\deploy.ps1 -SkipBuild
+
+# Production deployment
+.\scripts\deploy.ps1 -Production
+```
+
+Or manually:
+```powershell
+# Build the project
+npm run build
+
+# Deploy to Firebase
+firebase deploy
+```
+
+### Sample Data Setup
+To populate your Firestore with sample checkpoints and users:
+```powershell
+node scripts/populate-sample-data.js
+```
+
+### Live URLs
+- **Production App**: https://eventure-fest.web.app
+- **Firebase Console**: https://console.firebase.google.com/project/eventure-fest
+
+### Deployment Checklist
+- [ ] `.env` file configured with Firebase credentials
+- [ ] Firestore database created and rules deployed
+- [ ] Build successful (`npm run build`)
+- [ ] Firebase hosting deployed
+- [ ] Sample data populated (optional)
+- [ ] App accessible at live URL
+
+## Architecture
+
+### Hosting
+- **Frontend**: Firebase Hosting (React SPA)
+- **Database**: Cloud Firestore
+- **Authentication**: localStorage (nickname-based, upgradeable to Firebase Auth)
+
+### Security
+- Firestore security rules configured for public read/write (demo mode)
+- QR token validation prevents duplicate scans
+- Location-based validation (100m radius)
+- Time window validation for checkpoints
 
 ---
 

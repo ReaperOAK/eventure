@@ -1,28 +1,4 @@
-<<<<<<< HEAD
 {
   "indexes": [],
   "fieldOverrides": []
 }
-=======
-
-  "indexes": [
-    {
-      "collectionGroup": "users",
-      "queryScope": "COLLECTION",
-      "fields": [
-        { "fieldPath": "scanned", "order": "DESCENDING" },
-        { "fieldPath": "name", "order": "ASCENDING" }
-      ]
-    },
-    {
-      "collectionGroup": "checkpoints",
-      "queryScope": "COLLECTION",
-      "fields": [
-        { "fieldPath": "uuid", "order": "ASCENDING" }
-      ]
-    }
-  ],
-=======
-  "indexes": [],
-
->>>>>>> 7452904f7c675041cc29a5f36c5908dd1a60d55c

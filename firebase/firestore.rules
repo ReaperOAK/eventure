@@ -3,19 +3,21 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // Only allow users to read/write their own document
+    // Allow everyone to read/write users (simplified for demo)
     match /users/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow read, write: if true;
     }
 
     // Allow everyone to read checkpoints
     match /checkpoints/{checkpointId} {
       allow read: if true;
-      allow write: if false;
+      allow write: if true; // Allow admin to add checkpoints
     }
 
-    // Only allow adding scan logs (optional)
+    // Allow adding scan logs
     match /scans/{docId} {
-      allow create: if request.auth != null;
+      allow create: if true;
     }
+  }
+}
 
