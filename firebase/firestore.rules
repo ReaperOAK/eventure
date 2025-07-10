@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // USERS COLLECTION
+    match /users/{userId} {
+      allow read: if true;  // allow public leaderboard & progress views
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // CHECKPOINTS COLLECTION
+    match /checkpoints/{checkpointId} {
+      allow read: if true;  // public info
+      allow write: if false; // only allow admin writes (use Firestore Console or secure backend)
+    }
+
+    // SCANS COLLECTION
+    match /scans/{scanId} {
+      allow create: if true; // allow writing scan logs
+      allow read, update, delete: if false; // private logs
+    }
+  }
+}
