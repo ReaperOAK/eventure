@@ -1,6 +1,7 @@
 # Orchestrator – Eventure
 
 ## Responsibilities
+
 - Set up routing, state management, and app bootstrapping.
 - Integrate UI, QR, and backend modules into a seamless workflow.
 - Handle deployment (Vercel/Netlify), environment configs, and debugging.
@@ -8,6 +9,7 @@
 - Coordinate with all team members for smooth delivery.
 
 ## Features/Logic to Build
+
 - App router (React Router or similar)
 - Global state (Context or minimal state manager)
 - Environment config and deployment scripts
@@ -15,9 +17,10 @@
 - Build/test/deploy pipeline setup
 
 ## Files to Create
+
 - `/src/`:
-  - `App.tsx` (main app shell)
-  - `routes.tsx` (routing config)
+  - `App.jsx` (main app shell)
+  - `routes.jsx` (routing config)
   - `store.ts` (global state, if needed)
   - `env.ts` (environment config)
 - `/scripts/`:
@@ -26,9 +29,11 @@
   - `e2e/` (integration tests)
 
 ## Docs to Update
+
 - `README.md` (integration/deployment section)
 - Add architecture diagrams or deployment notes
 
 ---
+
 - Follow project structure and deployment guidelines in `eventure.md`.
 - Register all new files in the app and update docs/tests.

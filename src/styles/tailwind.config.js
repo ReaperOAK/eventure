@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,jsx}",
     "./public/index.html"
   ],
   theme: {
