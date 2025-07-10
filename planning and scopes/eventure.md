@@ -2,8 +2,6 @@
 
 ---
 
-## 🔥 TL;DR
-
 **Eventure** is a web app that allows participants in a college fest to scan **QR codes placed at various booths/events** to:
 
 * ✅ Track which events they've visited
@@ -69,7 +67,7 @@
 | Frontend    | React (Vite or CRA), TailwindCSS for styling                              |
 | Backend     | Firebase (Firestore + optional Auth)                                      |
 | QR Scanning | `react-qr-reader` or `html5-qrcode`                                       |
-| Hosting     | Vercel or Netlify                                                         |
+| Hosting     | firebase                                                                  |
 | Auth        | Simple nickname input + localStorage (can upgrade to Firebase Auth later) |
 
 ---
