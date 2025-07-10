@@ -56,13 +56,6 @@ const LandingPage = ({ onLogin, onRegister }) => {
         @media (max-width: 640px) {
           .max-w-lg { max-width: 95vw; }
         }
-        @keyframes bounce-slow {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
-        }
-        .animate-bounce-slow {
-          animation: bounce-slow 2.5s infinite;
-        }
       `}</style>
     </main>
   );
