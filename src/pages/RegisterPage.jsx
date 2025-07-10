@@ -1,11 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-interface RegisterPageProps {
-  onRegister: (name: string, email: string, password: string) => void;
-  onSwitchToLogin: () => void;
-}
-
-const RegisterPage: React.FC<RegisterPageProps> = ({ onRegister, onSwitchToLogin }) => {
+const RegisterPage = ({ onRegister, onSwitchToLogin }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -13,7 +8,7 @@ const RegisterPage: React.FC<RegisterPageProps> = ({ onRegister, onSwitchToLogin
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !password || !confirm) {
       setError('All fields are required.');

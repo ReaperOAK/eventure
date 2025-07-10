@@ -1,12 +1,7 @@
 
 import React from 'react';
 
-interface DashboardProps {
-  user: string;
-  onNavigate: (page: 'scan' | 'progress' | 'leaderboard' | 'admin') => void;
-}
-
-const Dashboard: React.FC<DashboardProps> = ({ user, onNavigate }) => {
+const Dashboard = ({ user, onNavigate }) => {
   return (
     <main className="flex flex-col items-center justify-center min-h-[70vh] gap-8 p-4">
       <h1 className="text-2xl font-bold text-center">Hi, {user}!</h1>

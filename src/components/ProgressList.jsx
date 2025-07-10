@@ -1,12 +1,5 @@
 
-import React from 'react';
-
-interface ProgressListProps {
-  checkpoints: { id: string; name: string }[];
-  total: number;
-}
-
-const ProgressList: React.FC<ProgressListProps> = ({ checkpoints, total }) => {
+const ProgressList = ({ checkpoints, total }) => {
   const percent = total > 0 ? Math.round((checkpoints.length / total) * 100) : 0;
   return (
     <section className="w-full max-w-md mx-auto p-4 flex flex-col gap-6">

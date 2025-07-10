@@ -20,7 +20,7 @@ import AdminPage from './pages/AdminPage';
 
 
 import RegisterPage from './pages/RegisterPage';
-import NavBar, { Page } from './components/NavBar';
+import NavBar from './components/NavBar';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
 

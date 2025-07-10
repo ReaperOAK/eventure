@@ -1,12 +1,13 @@
 import { useState } from 'react';
 
+
 const LoginForm = ({ onLogin, onSwitchToRegister }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!email.trim() || !password) {
       setError('Please enter your email and password.');

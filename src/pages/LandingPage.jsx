@@ -1,12 +1,6 @@
 import React from 'react';
 
-interface LandingPageProps {
-  onLogin: () => void;
-  onRegister: () => void;
-}
-
-
-const LandingPage: React.FC<LandingPageProps> = ({ onLogin, onRegister }) => {
+const LandingPage = ({ onLogin, onRegister }) => {
   return (
     <main className="flex flex-col min-h-screen bg-gradient-to-br from-fest-blue via-fest-blue-light to-fest-cream">
       <header className="w-full flex flex-col items-center pt-10 pb-4 px-4">

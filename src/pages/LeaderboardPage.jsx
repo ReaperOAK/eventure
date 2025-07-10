@@ -1,5 +1,4 @@
 
-import React from 'react';
 import Leaderboard from '../components/Leaderboard';
 
 // Placeholder data for now
@@ -9,7 +8,7 @@ const sampleEntries = [
   { id: 'u3', name: 'Rahul', score: 5 },
 ];
 
-const LeaderboardPage: React.FC = () => {
+const LeaderboardPage = () => {
   // In real app, fetch leaderboard data
   return (
     <div className="min-h-[70vh] flex items-center justify-center bg-gray-50">

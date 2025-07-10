@@ -1,12 +1,6 @@
-import React from 'react';
 import LoginForm from '../components/LoginForm';
 
-interface LoginPageProps {
-  onLogin: (email: string, password: string) => void;
-  onSwitchToRegister: () => void;
-}
-
-const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onSwitchToRegister }) => {
+const LoginPage = ({ onLogin, onSwitchToRegister }) => {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-fest-blue via-fest-blue-light to-fest-cream p-6">
       <div className="bg-white/80 rounded-xl shadow-lg p-8 flex flex-col items-center gap-6 max-w-md w-full">

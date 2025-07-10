@@ -1,12 +1,5 @@
 
-import React from 'react';
-
-interface HomeProps {
-  user: string;
-  onNavigate: (page: 'scan' | 'progress' | 'leaderboard') => void;
-}
-
-const Home: React.FC<HomeProps> = ({ user, onNavigate }) => {
+const Home = ({ user, onNavigate }) => {
   return (
     <main className="flex flex-col items-center justify-center min-h-[70vh] gap-8 p-4">
       <h1 className="text-2xl font-bold text-center">Welcome, {user}!</h1>

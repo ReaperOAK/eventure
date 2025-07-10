@@ -1,17 +1,5 @@
 
-import React from 'react';
-
-interface LeaderboardEntry {
-  id: string;
-  name: string;
-  score: number;
-}
-
-interface LeaderboardProps {
-  entries: LeaderboardEntry[];
-}
-
-const Leaderboard: React.FC<LeaderboardProps> = ({ entries }) => {
+const Leaderboard = ({ entries }) => {
   return (
     <section className="w-full max-w-md mx-auto p-4 flex flex-col gap-6">
       <h2 className="text-xl font-semibold text-center">Leaderboard</h2>
