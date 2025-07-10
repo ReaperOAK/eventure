@@ -1,12 +1,4 @@
-
-import React from 'react';
-
-interface NavBarProps {
-  onNavigate: (page: string) => void;
-  current: string;
-}
-
-const NavBar: React.FC<NavBarProps> = ({ onNavigate, current }) => {
+const NavBar = ({ onNavigate, current, onLogout }) => {
   const navItems = [
     { label: 'Dashboard', page: 'home' },
     { label: 'Scan', page: 'scan' },
@@ -30,6 +22,15 @@ const NavBar: React.FC<NavBarProps> = ({ onNavigate, current }) => {
           {item.label}
         </button>
       ))}
+      {onLogout && (
+        <button
+          className="px-3 py-1 rounded font-medium bg-red-100 text-red-700 hover:bg-red-200 ml-4 transition focus:ring-2 focus:ring-red-400"
+          onClick={onLogout}
+          aria-label="Logout"
+        >
+          Logout
+        </button>
+      )}
     </nav>
   );
 };

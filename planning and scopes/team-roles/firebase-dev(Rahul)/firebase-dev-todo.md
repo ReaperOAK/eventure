@@ -6,11 +6,11 @@
 - [ ] Create folder structure for services and config
 
 ## Backend Logic
-- [ ] Implement `firebaseConfig.ts` (Firebase setup)
-- [ ] Implement `userService.ts` (user CRUD)
-- [ ] Implement `checkpointService.ts` (checkpoint CRUD)
-- [ ] Implement `scanService.ts` (scan logic)
-- [ ] Implement `leaderboardService.ts` (leaderboard logic)
+- [ ] Implement `firebaseConfig.js` (Firebase setup)
+- [ ] Implement `userService.js` (user CRUD)
+- [ ] Implement `checkpointService.js` (checkpoint CRUD)
+- [ ] Implement `scanService.js` (scan logic)
+- [ ] Implement `leaderboardService.js` (leaderboard logic)
 - [ ] Write Firestore security rules (`firestore.rules`)
 - [ ] Create Firestore indexes (`firestore.indexes.json`)
 

@@ -1,3 +1,53 @@
+# UI/UX Overview
+
+## Component & Page List
+
+- **LoginForm**: Nickname login form with validation and accessibility.
+- **Dashboard**: Main user dashboard with navigation to Scan, Progress, Leaderboard, and Admin.
+- **NavBar**: Sticky navigation bar for all main pages.
+- **ScanPage / QRScanner**: QR code scanning interface with loading, error, and result states.
+- **ProgressPage / ProgressList**: Shows completed checkpoints, progress bar, and list.
+- **LeaderboardPage / Leaderboard**: Displays top users and scores.
+- **AdminPage / AdminPanel**: Admin checkpoint management UI.
+- **LoadingSpinner, ErrorMessage, ScanFeedback**: Shared UI state components.
+
+## Accessibility & Design System
+
+- **Mobile-first, responsive**: All pages/components adapt to mobile and desktop.
+- **Color palette**: Uses accessible, high-contrast colors (see `/src/styles/colour_scheme.md`).
+- **Typography**: Consistent scale, readable fonts.
+- **ARIA & semantics**: All forms, buttons, and alerts use ARIA roles/labels.
+- **Keyboard navigation**: All interactive elements are keyboard accessible.
+- **Loading/Error/Empty states**: Every page/component handles these states.
+- **Theming**: TailwindCSS for consistent spacing, color, and sizing.
+
+## UI Flow Diagrams/Screenshots
+
+Add diagrams or screenshots here to illustrate user journeys and page flows. Example template:
+
+```
+[Home/Login] → [Dashboard]
+   ├─> [Scan QR]
+   ├─> [Progress]
+   ├─> [Leaderboard]
+   └─> [Admin Panel]
+```
+
+*(Insert screenshots or Figma links as available)*
+
+## Testing
+
+- All major UI components have unit tests in `/tests/`.
+- Run tests with your preferred runner (Jest + React Testing Library recommended).
+
+## Integration
+
+- Components/pages are registered and imported in the app.
+- Placeholder/sample data is used where backend is not yet integrated.
+
+---
+
+For more, see `/planning and scopes/team-roles/ui-ux-dev (Owais)/ui-ux-dev.md` and `/planning and scopes/eventure.md`.
 # Eventure
 
 Smart QR-based Checkpoint Tracker for Fests

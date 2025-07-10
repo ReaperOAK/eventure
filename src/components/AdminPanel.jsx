@@ -1,18 +1,8 @@
+import { useState } from 'react';
 
-import React, { useState } from 'react';
-
-interface Checkpoint {
-  id: string;
-  name: string;
-  lat: number;
-  long: number;
-  startTime: string;
-  endTime: string;
-}
-
-const AdminPanel: React.FC = () => {
+const AdminPanel = () => {
   // Placeholder state for checkpoints
-  const [checkpoints, setCheckpoints] = useState<Checkpoint[]>([]);
+  const [checkpoints, setCheckpoints] = useState([]);
   const [form, setForm] = useState({
     name: '',
     lat: '',
@@ -22,11 +12,11 @@ const AdminPanel: React.FC = () => {
   });
   const [message, setMessage] = useState('');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleAdd = (e: React.FormEvent) => {
+  const handleAdd = (e) => {
     e.preventDefault();
     if (!form.name || !form.lat || !form.long || !form.startTime || !form.endTime) {
       setMessage('All fields are required.');

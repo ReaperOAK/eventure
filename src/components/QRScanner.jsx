@@ -1,14 +1,9 @@
+import { useState } from 'react';
 
-import React, { useState } from 'react';
-
-interface QRScannerProps {
-  onScan?: (data: string) => void;
-}
-
-const QRScanner: React.FC<QRScannerProps> = ({ onScan }) => {
+const QRScanner = ({ onScan }) => {
   const [scanning, setScanning] = useState(false);
   const [error, setError] = useState('');
-  const [result, setResult] = useState<string | null>(null);
+  const [result, setResult] = useState(null);
 
   // Placeholder for actual QR scan logic
   const handleStart = () => {

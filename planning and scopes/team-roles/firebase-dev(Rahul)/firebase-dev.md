@@ -20,11 +20,11 @@
 
 ## Files to Create
 - `/src/services/`:
-  - `firebaseConfig.ts` (Firebase setup)
-  - `userService.ts` (user CRUD)
-  - `checkpointService.ts` (checkpoint CRUD)
-  - `scanService.ts` (scan logic)
-  - `leaderboardService.ts` (leaderboard logic)
+  - `firebaseConfig.js` (Firebase setup)
+  - `userService.js` (user CRUD)
+  - `checkpointService.js` (checkpoint CRUD)
+  - `scanService.js` (scan logic)
+  - `leaderboardService.js` (leaderboard logic)
 - `/firebase/`:
   - `firestore.rules` (security rules)
   - `firestore.indexes.json` (indexes)

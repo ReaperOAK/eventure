@@ -18,20 +18,20 @@
 
 ## Files to Create
 - `/src/components/`:
-  - `LoginForm.tsx`
-  - `Dashboard.tsx`
-  - `ProgressList.tsx`
-  - `Leaderboard.tsx`
-  - `AdminPanel.tsx`
-  - `NavBar.tsx`
-  - `LoadingSpinner.tsx`
-  - `ErrorMessage.tsx`
+  - `LoginForm.jsx`
+  - `Dashboard.jsx`
+  - `ProgressList.jsx`
+  - `Leaderboard.jsx`
+  - `AdminPanel.jsx`
+  - `NavBar.jsx`
+  - `LoadingSpinner.jsx`
+  - `ErrorMessage.jsx`
 - `/src/pages/`:
-  - `Home.tsx`
-  - `DashboardPage.tsx`
-  - `ProgressPage.tsx`
-  - `LeaderboardPage.tsx`
-  - `AdminPage.tsx`
+  - `Home.jsx`
+  - `DashboardPage.jsx`
+  - `ProgressPage.jsx`
+  - `LeaderboardPage.jsx`
+  - `AdminPage.jsx`
 - `/src/styles/`:
   - `tailwind.config.js` (if not present)
 
