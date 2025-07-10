@@ -21,8 +21,8 @@
 - `/src/`:
   - `App.jsx` (main app shell)
   - `routes.jsx` (routing config)
-  - `store.ts` (global state, if needed)
-  - `env.ts` (environment config)
+  - `store.js` (global state, if needed)
+  - `env.js` (environment config)
 - `/scripts/`:
   - `deploy.ps1` or `deploy.sh` (deployment script)
 - `/tests/`:

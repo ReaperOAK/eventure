@@ -10,9 +10,9 @@
 
 - [ ] Build `QRScanner.jsx` (camera, scan, feedback)
 - [ ] Build `ScanFeedback.jsx` (scan result UI)
-- [ ] Implement `qrUtils.ts` (QR parsing, obfuscation)
-- [ ] Implement `geoUtils.ts` (distance calculation)
-- [ ] Implement `scanService.ts` (API calls, validation logic)
+- [ ] Implement `qrUtils.js` (QR parsing, obfuscation)
+- [ ] Implement `geoUtils.js` (distance calculation)
+- [ ] Implement `scanService.js` (API calls, validation logic)
 - [ ] Integrate geolocation check (100m radius)
 - [ ] Handle error states (invalid QR, out of bounds, duplicate scan)
 
