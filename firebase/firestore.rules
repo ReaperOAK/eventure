@@ -1,0 +1,6 @@
+// Firestore security rules placeholder
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // TODO: Add security rules
+  }
+}
