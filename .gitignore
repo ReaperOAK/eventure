@@ -1,3 +1,4 @@
+
 # Firebase build and deployment files
 /firebase-debug.log
 /firebase-debug.*.log
@@ -165,3 +166,8 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7452904f7c675041cc29a5f36c5908dd1a60d55c
