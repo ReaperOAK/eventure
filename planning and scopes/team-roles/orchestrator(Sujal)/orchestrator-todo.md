@@ -6,10 +6,10 @@
 - [ ] Create folder structure for app shell, routes, store, env
 
 ## Integration
-- [ ] Implement `App.tsx` (main app shell)
-- [ ] Implement `routes.tsx` (routing config)
-- [ ] Implement `store.ts` (global state, if needed)
-- [ ] Implement `env.ts` (environment config)
+- [ ] Implement `App.jsx` (main app shell)
+- [ ] Implement `routes.jsx` (routing config)
+- [ ] Implement `store.js` (global state, if needed)
+- [ ] Implement `env.js` (environment config)
 - [ ] Register all pages/components in router
 - [ ] Integrate UI, QR, and backend modules
 

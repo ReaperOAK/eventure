@@ -1,3 +1,4 @@
+
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
@@ -19,5 +20,4 @@ service cloud.firestore {
       allow create: if true; // allow writing scan logs
       allow read, update, delete: if false; // private logs
     }
-  }
-}
+

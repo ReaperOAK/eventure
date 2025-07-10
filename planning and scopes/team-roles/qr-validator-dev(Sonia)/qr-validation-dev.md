@@ -16,13 +16,13 @@
 
 ## Files to Create
 - `/src/components/`:
-  - `QRScanner.tsx`
-  - `ScanFeedback.tsx`
+  - `QRScanner.jsx`
+  - `ScanFeedback.jsx`
 - `/src/utils/`:
-  - `qrUtils.ts` (QR parsing, obfuscation)
-  - `geoUtils.ts` (distance calculation)
+  - `qrUtils.js` (QR parsing, obfuscation)
+  - `geoUtils.js` (distance calculation)
 - `/src/services/`:
-  - `scanService.ts` (API calls, validation logic)
+  - `scanService.js` (API calls, validation logic)
 
 ## Docs to Update
 - `README.md` (QR/validation section)

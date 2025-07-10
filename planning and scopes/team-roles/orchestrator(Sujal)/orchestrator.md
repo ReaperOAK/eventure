@@ -16,10 +16,10 @@
 
 ## Files to Create
 - `/src/`:
-  - `App.tsx` (main app shell)
-  - `routes.tsx` (routing config)
-  - `store.ts` (global state, if needed)
-  - `env.ts` (environment config)
+  - `App.jsx` (main app shell)
+  - `routes.jsx` (routing config)
+  - `store.js` (global state, if needed)
+  - `env.js` (environment config)
 - `/scripts/`:
   - `deploy.ps1` or `deploy.sh` (deployment script)
 - `/tests/`:

@@ -1,4 +1,4 @@
-{
+
   "indexes": [
     {
       "collectionGroup": "users",
@@ -16,5 +16,6 @@
       ]
     }
   ],
-  "fieldOverrides": []
-}
+=======
+  "indexes": [],
+
