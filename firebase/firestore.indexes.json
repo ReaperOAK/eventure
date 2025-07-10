@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+{
+  "indexes": [],
+  "fieldOverrides": []
+}
+=======
 
   "indexes": [
     {
@@ -19,3 +25,4 @@
 =======
   "indexes": [],
 
+>>>>>>> 7452904f7c675041cc29a5f36c5908dd1a60d55c
