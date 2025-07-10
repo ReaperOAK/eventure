@@ -1,6 +1,7 @@
 # UI/UX Dev – Eventure
 
 ## Responsibilities
+
 - Design and implement the React UI for all participant and admin pages.
 - Ensure navigation is smooth and intuitive.
 - Style the app using TailwindCSS, following the design system and accessibility guidelines.
@@ -9,6 +10,7 @@
 - Collaborate with other devs to integrate backend and QR logic.
 
 ## Pages/Components to Build
+
 - Home/Login page (nickname input, redirect logic)
 - Dashboard (scan, progress, leaderboard options)
 - Progress page (list of completed checkpoints, XP/completion %)
@@ -17,7 +19,16 @@
 - Shared layout, navigation, and feedback components
 
 ## Files to Create
+
 - `/src/components/`:
+  - `LoginForm.jsx`
+  - `Dashboard.jsx`
+  - `ProgressList.jsx`
+  - `Leaderboard.jsx`
+  - `AdminPanel.jsx`
+  - `NavBar.jsx`
+  - `LoadingSpinner.jsx`
+  - `ErrorMessage.jsx`
   - `LoginForm.jsx`
   - `Dashboard.jsx`
   - `ProgressList.jsx`
@@ -41,6 +52,7 @@
 - Add screenshots or UI flow diagrams if possible (recommended for next phase)
 
 ---
+
 - Follow the coding and UI guidelines in `eventure.md` and project instructions.
 - Register all new components in the app routing/module system.
 - Write or update tests for all UI components.
