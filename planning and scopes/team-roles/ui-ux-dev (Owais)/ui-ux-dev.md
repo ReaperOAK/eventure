@@ -35,9 +35,10 @@
 - `/src/styles/`:
   - `tailwind.config.js` (if not present)
 
+
 ## Docs to Update
-- `README.md` (UI/UX section)
-- Add screenshots or UI flow diagrams if possible
+- `README.md` (UI/UX section) – updated with component/page list and accessibility notes
+- Add screenshots or UI flow diagrams if possible (recommended for next phase)
 
 ---
 - Follow the coding and UI guidelines in `eventure.md` and project instructions.
