@@ -1,20 +1,16 @@
+
 import React from 'react';
+import full_logo from '../assets/full_logo.png';
 
 const LandingPage = ({ onLogin, onRegister }) => {
   return (
     <main className="flex flex-col min-h-screen bg-gradient-to-br from-fest-blue via-fest-blue-light to-fest-cream">
-      <header className="w-full flex flex-col items-center pt-10 pb-4 px-4">
+      <header className="w-full flex flex-col items-center px-4 ">
         <img
-          src="/logo192.png"
+          src={full_logo}
           alt="Eventure Logo"
-          className="w-24 h-24 md:w-32 md:h-32 drop-shadow-lg animate-bounce-slow"
+          className="w-50 h-50 md:w-28 md:h-28 drop-shadow-lg animate-bounce-slow mb-0"
         />
-        <h1 className="mt-4 text-4xl md:text-5xl font-extrabold text-fest-blue text-center drop-shadow-lg tracking-tight">
-          Eventure
-        </h1>
-        <p className="mt-2 text-lg md:text-2xl text-fest-blue-light text-center font-medium max-w-xl">
-          Smart QR-based Checkpoint Tracker for Fests
-        </p>
       </header>
       <section className="flex-1 flex flex-col items-center justify-center px-4">
         <div className="w-full max-w-lg bg-white/90 rounded-3xl shadow-2xl p-8 md:p-12 flex flex-col items-center gap-8">
