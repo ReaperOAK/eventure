@@ -4,7 +4,7 @@ import React from 'react';
 const Dashboard = ({ user, onNavigate }) => {
   return (
     <main className="flex flex-col items-center justify-center min-h-[70vh] gap-8 p-4">
-      <h1 className="text-2xl font-bold text-center">Hi, {user}!</h1>
+      <h1 className="text-2xl font-bold text-center">Hi, {user.email}!</h1>
       <p className="text-gray-600 text-center max-w-xs">Welcome to your dashboard. Choose an action below:</p>
       <nav className="flex flex-col gap-4 w-full max-w-xs">
         <button

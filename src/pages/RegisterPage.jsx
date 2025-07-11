@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import { auth, db } from '../services/firebase'; // adjust path to your firebase.js
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 
-const RegisterPage = ({ onRegister, onSwitchToLogin }) => {
+const RegisterPage = ({ onSwitchToLogin }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -8,8 +11,9 @@ const RegisterPage = ({ onRegister, onSwitchToLogin }) => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!name.trim() || !email.trim() || !password || !confirm) {
       setError('All fields are required.');
       return;
@@ -18,12 +22,30 @@ const RegisterPage = ({ onRegister, onSwitchToLogin }) => {
       setError('Passwords do not match.');
       return;
     }
+
     setError('');
     setLoading(true);
-    setTimeout(() => {
+
+    try {
+      const userCred = await createUserWithEmailAndPassword(auth, email.trim(), password);
+      const user = userCred.user;
+
+      // Save to Firestore
+      await setDoc(doc(db, 'users', user.uid), {
+        name: name.trim(),
+        email: user.email,
+        createdAt: serverTimestamp()
+      });
+
+      alert('Registration successful! You can now log in.');
+      onSwitchToLogin();
+
+    } catch (err) {
+      console.error(err);
+      setError(err.message);
+    } finally {
       setLoading(false);
-      onRegister(name.trim(), email.trim(), password);
-    }, 800);
+    }
   };
 
   return (
@@ -33,6 +55,7 @@ const RegisterPage = ({ onRegister, onSwitchToLogin }) => {
       aria-label="Registration form"
     >
       <h2 className="text-xl font-semibold text-center">Register for Eventure</h2>
+
       <label className="font-medium">Nickname
         <input
           type="text"
@@ -42,6 +65,7 @@ const RegisterPage = ({ onRegister, onSwitchToLogin }) => {
           required
         />
       </label>
+
       <label className="font-medium">Email
         <input
           type="email"
@@ -51,6 +75,7 @@ const RegisterPage = ({ onRegister, onSwitchToLogin }) => {
           required
         />
       </label>
+
       <label className="font-medium">Password
         <input
           type="password"
@@ -60,6 +85,7 @@ const RegisterPage = ({ onRegister, onSwitchToLogin }) => {
           required
         />
       </label>
+
       <label className="font-medium">Confirm Password
         <input
           type="password"
@@ -69,9 +95,11 @@ const RegisterPage = ({ onRegister, onSwitchToLogin }) => {
           required
         />
       </label>
+
       {error && (
         <div className="text-red-600 text-sm" role="alert">{error}</div>
       )}
+
       <button
         type="submit"
         className="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 transition disabled:opacity-50"
@@ -79,6 +107,7 @@ const RegisterPage = ({ onRegister, onSwitchToLogin }) => {
       >
         {loading ? 'Registering…' : 'Register'}
       </button>
+
       <button
         type="button"
         className="text-blue-600 underline text-sm mt-2"

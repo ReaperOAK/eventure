@@ -1,5 +1,6 @@
 import { useState } from 'react';
-
+import { auth } from '../services/firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 const LoginForm = ({ onLogin, onSwitchToRegister }) => {
   const [email, setEmail] = useState('');
@@ -15,11 +16,21 @@ const LoginForm = ({ onLogin, onSwitchToRegister }) => {
     }
     setError('');
     setLoading(true);
-    setTimeout(() => {
-      // In a real app, validate credentials with backend
-      onLogin(email.trim(), password);
-      setLoading(false);
-    }, 800);
+
+    signInWithEmailAndPassword(auth, email.trim(), password)
+      .then(userCredential => {
+        const user = userCredential.user;
+        console.log("Logged in:", user);
+        if (onLogin) {
+          onLogin(user);  // Pass the user object to parent component
+        }
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error(error);
+        setError("Invalid email or password.");
+        setLoading(false);
+      });
   };
 
   return (
@@ -29,6 +40,7 @@ const LoginForm = ({ onLogin, onSwitchToRegister }) => {
       aria-label="Login form"
     >
       <h2 className="text-xl font-semibold text-center">Welcome to Eventure</h2>
+      
       <label className="font-medium">Email
         <input
           type="email"
@@ -42,6 +54,7 @@ const LoginForm = ({ onLogin, onSwitchToRegister }) => {
           disabled={loading}
         />
       </label>
+
       <label className="font-medium">Password
         <input
           type="password"
@@ -54,11 +67,13 @@ const LoginForm = ({ onLogin, onSwitchToRegister }) => {
           disabled={loading}
         />
       </label>
+
       {error && (
         <div id="login-error" className="text-red-600 text-sm" role="alert">
           {error}
         </div>
       )}
+
       <button
         type="submit"
         className="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 transition disabled:opacity-50"
@@ -66,6 +81,7 @@ const LoginForm = ({ onLogin, onSwitchToRegister }) => {
       >
         {loading ? 'Logging in…' : 'Login'}
       </button>
+
       <button
         type="button"
         className="text-blue-600 underline text-sm mt-2"
@@ -76,6 +92,5 @@ const LoginForm = ({ onLogin, onSwitchToRegister }) => {
     </form>
   );
 };
-
 
 export default LoginForm;
